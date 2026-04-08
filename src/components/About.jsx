@@ -42,7 +42,11 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo">I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.</p>
+                    <p className="mb-10 max-w-2xl font-Ovo">Experienced Construction Painter with over 24 years of international experience
+in Portugal and Canada. Specializing in residential and commercial painting, with
+strong skills in surface preparation, finishing, and detail work. Known for
+delivering clean, precise results and maintaining high standards of
+workmanship.</p>
 
                     <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
                         {data.map((data) => (
