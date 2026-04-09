@@ -1,35 +1,37 @@
 export default function Services() {
     const services = [
         {
-            name: 'Web design',
-            icon: './assets/web-icon.png',
-            description: 'Web development is the process of building, programming...',
-            link: '#',
+            name: 'Interior Painting',
+            icon: '/assets/web-icon.png',
+            description: 'Transform your living spaces with meticulous surface preparation and flawless paint application for walls, ceilings, and trim.',
+            link: '#contact',
         },
         {
-            name: 'Mobile app',
-            icon: './assets/mobile-icon.png',
-            description: 'Web development is the process of building, programming...',
-            link: '#',
+            name: 'Exterior Painting',
+            icon: '/assets/mobile-icon.png',
+            description: 'Protect and beautify your property with durable, weather-resistant exterior finishes for siding, stucco, and wood.',
+            link: '#contact',
         },
         {
-            name: 'UI/ UX design',
-            icon: './assets/ui-icon.png',
-            description: 'Web development is the process of building, programming...',
-            link: '#',
+            name: 'Commercial Painting',
+            icon: '/assets/ui-icon.png',
+            description: 'Professional painting services tailored for businesses, ensuring minimal disruption and a pristine, welcoming environment.',
+            link: '#contact',
         },
         {
-            name: 'Graphics design',
-            icon: './assets/graphics-icon.png',
-            description: 'Web development is the process of building, programming...',
-            link: '#',
+            name: 'Surface Preparation',
+            icon: '/assets/graphics-icon.png',
+            description: 'Expert sanding, scraping, crack filling, and priming to ensure a perfectly smooth canvas for long-lasting finishes.',
+            link: '#contact',
         }
     ];
     return (
         <div id="services" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-lg font-Ovo">What i offer</h4>
-            <h2 className="text-center text-5xl font-Ovo">My services</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.</p>
+            <h4 className="text-center mb-2 text-lg font-Ovo">What we offer</h4>
+            <h2 className="text-center text-5xl font-Ovo">Our Services</h2>
+            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+                Providing high-quality residential and commercial painting services. We handle everything from complete exterior transformations to detailed interior touch-ups.
+            </p>
 
             <div className="grid grid-cols-auto gap-6 my-10">
                 {services.map((service) => (
@@ -37,7 +39,7 @@ export default function Services() {
                         <img src={service.icon} alt="" className="w-10" />
                         <h3 className="text-lg my-4 text-gray-700 dark:text-white">{service.name}</h3>
                         <p className="text-sm text-gray-600 leading-5 dark:text-white/80">{service.description}</p>
-                        <a href={service.link} className="flex items-center gap-2 text-sm mt-5">Read more <img src="./assets/right-arrow.png" alt="" className="w-4" /></a>
+                        <a href={service.link} className="flex items-center gap-2 text-sm mt-5">Get a quote <img src="/assets/right-arrow.png" alt="" className="w-4" /></a>
                     </div>
                 ))}
             </div>

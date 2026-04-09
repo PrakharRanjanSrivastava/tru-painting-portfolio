@@ -2,26 +2,26 @@ export default function Footer() {
     return (
         <div className="mt-20">
             <div className="text-center">
-                <a href="https://prebuiltui.com?utm_source=eliana">
-                    <img src="/assets/logo.png" alt="" className="w-36 mx-auto mb-2 dark:hidden" />
-                    <img src="/assets/logo_dark.png" alt="" className="w-36 mx-auto mb-2 hidden dark:block" />
-                </a>
+                <h2 className="text-3xl font-Ovo mb-4 dark:text-white">Tru-colours Painting</h2>
 
-
-                <div className="w-max flex items-center gap-2 mx-auto">
-                    <img src="./assets/mail_icon.png" alt="" className="w-5 dark:hidden" />
-                    <img src="./assets/mail_icon_dark.png" alt="" className="w-5 hidden dark:block" />
-
-                    <a href="mailto:contact@prebuiltui.com">contact@prebuiltui.com</a>
+                <div className="w-max flex flex-col items-center gap-3 mx-auto text-gray-700 dark:text-white/80">
+                    <div className="flex items-center gap-2">
+                        <img src="/assets/mail_icon.png" alt="" className="w-5 dark:hidden" />
+                        <img src="/assets/mail_icon_dark.png" alt="" className="w-5 hidden dark:block" />
+                        <a href="mailto:Tru-colourspainting@outlook.com">Tru-colourspainting@outlook.com</a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span>📞</span>
+                        <a href="tel:+12266374112">+1 226 637 4112</a>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <span>📍</span>
+                        <p>22 Hitch Cres, St. Thomas, ON</p>
+                    </div>
                 </div>
             </div>
-            <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3">
-                <p>© {new Date().getFullYear()} <a href="https://prebuiltui.com">PrebuiltUI</a>. All rights reserved.</p>
-                <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                    <li><a target='_blank' href="https://github.com/prebuiltui">GitHub</a></li>
-                    <li><a target='_blank' href="linkedin.com/company/prebuiltui">LinkedIn</a></li>
-                    <li><a target='_blank' href="https://x.com/prebuiltui">Twitter</a></li>
-                </ul>
+            <div className="text-center flex items-center justify-center border-t border-gray-400 mx-[10%] mt-12 py-6">
+                <p className="dark:text-white/80">© {new Date().getFullYear()} Tru-colours Painting. All rights reserved.</p>
             </div>
         </div>
     )
