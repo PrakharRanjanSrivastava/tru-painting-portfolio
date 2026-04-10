@@ -6,6 +6,8 @@ import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
+import FAQ from './components/FAQ'
+import Review from './components/review'
 
 export default function App() {
     return (
@@ -16,7 +18,8 @@ export default function App() {
             <About />
             <Services />
             <Work />
-            <Contact />
+            <FAQ/>
+            <Review/>
             <Footer />
         </>
     )
