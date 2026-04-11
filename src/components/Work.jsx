@@ -3,7 +3,7 @@ export default function Work() {
         {
             name: 'Residential Interior',
             icon: '/assets/work-1.avif',
-            description: 'Living Room ',
+            description: 'Living Room Transformation',
             link: '',
         },
         {
@@ -19,7 +19,7 @@ export default function Work() {
             link: '',
         },
         {
-            name: 'Surface Restores',
+            name: 'Surface Restoration',
             icon: '/assets/work-4.png',
             description: 'Sanding & Priming',
             link: '',
@@ -48,7 +48,9 @@ export default function Work() {
                     </div>
                 ))}
             </div>
-            <a href="#contact" className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white">
+            
+          
+            <a href="mailto:tru-colourspainting@outlook.com?subject=Project Inquiry - Tru-colours Painting" className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white">
                 Start Your Project
                 <img src="/assets/right-arrow-bold.png" alt="" className="w-4 dark:hidden" />
                 <img src="/assets/right-arrow-bold-dark.png" alt="" className="w-4 hidden dark:block" />

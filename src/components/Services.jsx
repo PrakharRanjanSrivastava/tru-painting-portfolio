@@ -1,22 +1,25 @@
 export default function Services() {
+    // Defined the mailto link once to keep the code clean
+    const mailtoLink = "mailto:tru-colourspainting@outlook.com?subject=Quote Request - Tru-colours Painting";
+
     const services = [
         {
             name: 'Residential Interior',
             icon: '/assets/web-icon.png',
             description: 'Transform your living spaces with meticulous surface preparation and flawless paint application for walls, ceilings, and trim.',
-            link: '#contact',
+            link: mailtoLink, // Updated link
         },
         {
             name: 'Commercial Interior',
             icon: '/assets/ui-icon.png',
             description: 'Professional interior painting tailored for businesses, ensuring minimal disruption and a pristine, welcoming environment.',
-            link: '#contact',
+            link: mailtoLink, // Updated link
         },
         {
             name: 'Surface Preparation',
             icon: '/assets/graphics-icon.png',
             description: 'Expert sanding, scraping, crack filling, and priming to ensure a perfectly smooth canvas for long-lasting finishes.',
-            link: '#contact',
+            link: mailtoLink, // Updated link
         }
     ];
     return (

@@ -31,10 +31,12 @@ export default function Navbar() {
             }
         })
 
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Force light mode by default (ignore system preferences)
+        if (localStorage.theme === 'dark') {
             document.documentElement.classList.add('dark')
         } else {
             document.documentElement.classList.remove('dark')
+            localStorage.theme = 'light'
         }
     }, [])
 
@@ -44,10 +46,9 @@ export default function Navbar() {
                 <img src="./assets/header-bg-color.png" alt="" className="w-full" />
             </div>
 
-            {/* Changed justify-between to justify-end or added a spacer div below */}
             <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
                 
-                {/* 1. This empty div acts as a spacer to keep the menu centered */}
+                {/* Spacer to keep center balanced without logo */}
                 <div className="hidden md:block w-28"></div>
 
                 <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
@@ -55,7 +56,8 @@ export default function Navbar() {
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">About me</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Services</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">My Work</a></li>
-                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">Contact me</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#faq">FAQ</a></li>
+                    <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#review">Review</a></li>
                 </ul>
 
                 <div className="flex items-center gap-4">
@@ -64,19 +66,13 @@ export default function Navbar() {
                         <img src="./assets/sun_icon.png" alt="" className="w-5 hidden dark:block" />
                     </button>
 
-                    <a href="#contact" className="hidden lg:flex items-center gap-3 px-8 py-1.5 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-4 font-Ovo dark:border-white/30">
-                        Contact
-                        <img src="./assets/arrow-icon.png" alt="" className="w-3 dark:hidden" />
-                        <img src="./assets/arrow-icon-dark.png" alt="" className="w-3 hidden dark:block" />
-                    </a>
-
                     <button className="block md:hidden ml-3" onClick={openMenu}>
                         <img src="./assets/menu-black.png" alt="" className="w-6 dark:hidden" />
                         <img src="./assets/menu-white.png" alt="" className="w-6 hidden dark:block" />
                     </button>
                 </div>
                 
-                {/* Mobile Menu logic remains same */}
+                {/* Mobile Menu */}
                 <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
                     <div className="absolute right-6 top-6" onClick={closeMenu}>
                         <img src="./assets/close-black.png" alt="" className="w-5 cursor-pointer dark:hidden" />
@@ -86,7 +82,8 @@ export default function Navbar() {
                     <li><a href="#about" onClick={closeMenu}>About me</a></li>
                     <li><a href="#services" onClick={closeMenu}>Services</a></li>
                     <li><a href="#work" onClick={closeMenu}>My Work</a></li>
-                    <li><a href="#contact" onClick={closeMenu}>Contact me</a></li>
+                    <li><a href="#faq" onClick={closeMenu}>FAQ</a></li>
+                    <li><a href="#review" onClick={closeMenu}>Review</a></li>
                 </ul>
             </nav>
         </>

@@ -1,13 +1,11 @@
 export default function Header() {
     return (
-        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-            <img src="/assets/profile-img.avif" alt="Nuno Jesus" className="rounded-full w-32" />
+        <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 relative z-10">
             <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
                 Hi! I'm Nuno Jesus
                 <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
             </h3>
             
-            {/* Updated Heading with tinted 'colours' */}
             <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
                 Tru-<span className="bg-gradient-to-r from-[#2f8f83] via-[#3fae7c] to-[#4c8fb8] bg-clip-text text-transparent">colours</span> Painting.
             </h1>
@@ -17,8 +15,9 @@ export default function Header() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-                <a href="#contact"
-                    className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#2f8f83] via-[#3fae7c] to-[#4c8fb8] text-white flex items-center gap-2 dark:border-transparent">
+                {/* Updated Action: Opens Email Client */}
+                <a href="mailto:tru-colourspainting@outlook.com?subject=Quote Request - Tru-colours Painting"
+                    className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#2f8f83] via-[#3fae7c] to-[#4c8fb8] text-white flex items-center gap-2 dark:border-transparent cursor-pointer">
                     Get a Quote <img src="/assets/right-arrow-white.png" alt="" className="w-4" />
                 </a>
 

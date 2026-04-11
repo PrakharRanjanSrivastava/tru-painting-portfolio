@@ -16,7 +16,6 @@ export default function Review()  {
     const renderCard = (testimonial, index) => (
         <div key={index} className="bg-white border border-slate-200 hover:border-slate-300 rounded-xl p-4 shrink-0 w-[350px] dark:bg-darkHover/30 dark:border-white/20">
             <div className="flex mb-4">
-                {/* Logic to render either 4 or 5 stars based on the testimonial data */}
                 {Array(5).fill(0).map((_, i) => (
                     <svg 
                         key={i} 
@@ -68,7 +67,7 @@ export default function Review()  {
                     .animate-scroll-reverse { animation: scrollReverse 15s linear infinite; }
                 `}
             </style>
-            <section className="bg-[#FAFAFA] dark:bg-transparent py-16 px-4">
+            <section id="review" className="bg-[#FAFAFA] dark:bg-transparent py-16 px-4 scroll-mt-20">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-8">
                         <div className="inline-block bg-neutral-100 dark:bg-darkHover border border-neutral-400 dark:border-white/30 rounded-full px-4 py-1 mb-3">
