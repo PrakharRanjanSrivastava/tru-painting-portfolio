@@ -12,9 +12,7 @@ export default function Navbar() {
         sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
     const toggleTheme = () => {
-
         document.documentElement.classList.toggle('dark');
-
         if (document.documentElement.classList.contains('dark')) {
             localStorage.theme = 'dark';
         } else {
@@ -23,9 +21,8 @@ export default function Navbar() {
     }
 
     useEffect(() => {
-
         window.addEventListener('scroll', () => {
-            if (scrollY > 50) {
+            if (window.scrollY > 50) {
                 navRef.current.classList.add('bg-white', 'bg-opacity-50', 'backdrop-blur-lg', 'shadow-sm', 'dark:bg-darkTheme', 'dark:shadow-white/20');
                 navLinkRef.current.classList.remove('bg-white', 'shadow-sm', 'bg-opacity-50', 'dark:border', 'dark:border-white/30', "dark:bg-transparent");
             } else {
@@ -33,8 +30,6 @@ export default function Navbar() {
                 navLinkRef.current.classList.add('bg-white', 'shadow-sm', 'bg-opacity-50', 'dark:border', 'dark:border-white/30', "dark:bg-transparent");
             }
         })
-
-        // -------- light mode and dark mode -----------
 
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
@@ -49,12 +44,11 @@ export default function Navbar() {
                 <img src="./assets/header-bg-color.png" alt="" className="w-full" />
             </div>
 
+            {/* Changed justify-between to justify-end or added a spacer div below */}
             <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
-
-                <a href="">
-                    <img src="./assets/logo main.png" alt="Logo" className="w-16 h-16 cursor-pointer mr-14 dark:hidden" />
-                    <img src="./assets/full logo.PNG" alt="Logo" className="w-16 h-16 rounded-full object-cover cursor-pointer mr-14 hidden dark:block" />
-                </a>
+                
+                {/* 1. This empty div acts as a spacer to keep the menu centered */}
+                <div className="hidden md:block w-28"></div>
 
                 <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
@@ -80,16 +74,14 @@ export default function Navbar() {
                         <img src="./assets/menu-black.png" alt="" className="w-6 dark:hidden" />
                         <img src="./assets/menu-white.png" alt="" className="w-6 hidden dark:block" />
                     </button>
-
                 </div>
-                {/* -- ----- mobile menu ------  -- */}
+                
+                {/* Mobile Menu logic remains same */}
                 <ul ref={sideMenuRef} className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
-
                     <div className="absolute right-6 top-6" onClick={closeMenu}>
                         <img src="./assets/close-black.png" alt="" className="w-5 cursor-pointer dark:hidden" />
                         <img src="./assets/close-white.png" alt="" className="w-5 cursor-pointer hidden dark:block" />
                     </div>
-
                     <li><a href="#top" onClick={closeMenu}>Home</a></li>
                     <li><a href="#about" onClick={closeMenu}>About me</a></li>
                     <li><a href="#services" onClick={closeMenu}>Services</a></li>

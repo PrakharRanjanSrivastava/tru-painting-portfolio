@@ -1,21 +1,15 @@
 export default function Services() {
     const services = [
         {
-            name: 'Interior Painting',
+            name: 'Residential Interior',
             icon: '/assets/web-icon.png',
             description: 'Transform your living spaces with meticulous surface preparation and flawless paint application for walls, ceilings, and trim.',
             link: '#contact',
         },
         {
-            name: 'Exterior Painting',
-            icon: '/assets/mobile-icon.png',
-            description: 'Protect and beautify your property with durable, weather-resistant exterior finishes for siding, stucco, and wood.',
-            link: '#contact',
-        },
-        {
-            name: 'Commercial Painting',
+            name: 'Commercial Interior',
             icon: '/assets/ui-icon.png',
-            description: 'Professional painting services tailored for businesses, ensuring minimal disruption and a pristine, welcoming environment.',
+            description: 'Professional interior painting tailored for businesses, ensuring minimal disruption and a pristine, welcoming environment.',
             link: '#contact',
         },
         {
@@ -30,7 +24,7 @@ export default function Services() {
             <h4 className="text-center mb-2 text-lg font-Ovo">What we offer</h4>
             <h2 className="text-center text-5xl font-Ovo">Our Services</h2>
             <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-                Providing high-quality residential and commercial painting services. We handle everything from complete exterior transformations to detailed interior touch-ups.
+                Providing high-quality residential and commercial interior painting services. We handle everything from complete room transformations to detailed trim and touch-ups.
             </p>
 
             <div className="grid grid-cols-auto gap-6 my-10">

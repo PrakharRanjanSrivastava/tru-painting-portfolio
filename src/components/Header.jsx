@@ -9,7 +9,7 @@ export default function Header() {
             
             {/* Updated Heading with tinted 'colours' */}
             <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-                Tru-<span className="bg-gradient-to-r from-[#b820e6] to-[#da7d20] bg-clip-text text-transparent">colours</span> Painting.
+                Tru-<span className="bg-gradient-to-r from-[#2f8f83] via-[#3fae7c] to-[#4c8fb8] bg-clip-text text-transparent">colours</span> Painting.
             </h1>
             
             <p className="max-w-2xl mx-auto font-Ovo">
@@ -18,7 +18,7 @@ export default function Header() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
                 <a href="#contact"
-                    className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
+                    className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#2f8f83] via-[#3fae7c] to-[#4c8fb8] text-white flex items-center gap-2 dark:border-transparent">
                     Get a Quote <img src="/assets/right-arrow-white.png" alt="" className="w-4" />
                 </a>
 

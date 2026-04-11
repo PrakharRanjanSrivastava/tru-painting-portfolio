@@ -3,13 +3,13 @@ export default function Work() {
         {
             name: 'Residential Interior',
             icon: '/assets/work-1.avif',
-            description: 'Living Room Transformation',
+            description: 'Living Room ',
             link: '',
         },
         {
-            name: 'Commercial Exterior',
+            name: 'Commercial Interior',
             icon: '/assets/work-2.jpg',
-            description: 'Office Building Facade',
+            description: 'Office & Retail Spaces',
             link: '',
         },
         {
@@ -19,7 +19,7 @@ export default function Work() {
             link: '',
         },
         {
-            name: 'Surface Restoration',
+            name: 'Surface Restores',
             icon: '/assets/work-4.png',
             description: 'Sanding & Priming',
             link: '',
