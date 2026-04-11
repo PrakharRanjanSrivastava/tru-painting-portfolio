@@ -1,6 +1,10 @@
 export default function Header() {
     return (
         <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 relative z-10">
+            
+            {/* Restored Profile Image */}
+            <img src="/assets/profile-img.avif" alt="Nuno Jesus" className="rounded-full w-32 h-22 object-cover" />
+            
             <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
                 Hi! I'm Nuno Jesus
                 <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
